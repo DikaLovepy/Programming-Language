@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming Languages</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/Icon.png" />
+  </head>
+  <body>
+    <div id="page1" class="page">
+      <div
+        class="blurred-background"
+        style="background-image: url('img/page1.png')"
+      ></div>
+      <div>
+        <h1>Welcome to BinaryBloom</h1>
+        <button class="start-button" onclick="startWithSound()">START</button>
+        <audio id="button-sound" src="sound/yippee-147032.mp3"></audio>
+      </div>
+    </div>
+    <div id="page2" class="page">
+      <div
+        class="blurred-background"
+        style="background-image: url('img/page2.png')"
+      ></div>
+      <div>
+        <h2>Language Programming</h2>
+        <div class="language-carousel" id="carousel">
+          <div class="language-item">
+            <img src="img/python.png" alt="Python" />
+            <span>Python</span>
+            <a
+              href="https://www.w3schools.com/python/default.asp"
+              target="_blank"
+              >Learn python here</a
+            >
+          </div>
+          <div class="language-item">
+            <img src="img/Javascript.png" alt="JavaScript" />
+            <span>JavaScript</span>
+            <a href="https://www.w3schools.com/js/default.asp" target="_blank"
+              >Learn javacript here</a
+            >
+          </div>
+
+          <div class="language-item">
+            <img src="img/java.png" alt="Java" />
+            <span>Java</span>
+            <a href="https://www.w3schools.com/java/default.asp" target="_blank"
+              >Learn java here</a
+            >
+          </div>
+
+          <div class="language-item">
+            <img src="img/cpp.png" alt="C++" />
+            <span>C++</span>
+            <a href="https://www.w3schools.com/cpp/default.asp" target="_blank"
+              >Learn C++ here</a
+            >
+          </div>
+
+          <div class="language-item">
+            <img src="img/swift.png" alt="Swift" />
+            <span>Swift</span>
+            <a href="https://swift.org" target="_blank">Learn Swift here</a>
+          </div>
+
+          <div class="language-item">
+            <img src="img/GO.png" alt="Go" />
+            <span>Golang</span>
+            <a href="https://www.w3schools.com/go/index.php" target="_blank"
+              >Learn Go here</a
+            >
+          </div>
+
+          <div class="language-item">
+            <img src="img/kotlin.png" alt="Kotlin" />
+            <span>Kotlin</span>
+            <a href="https://www.w3schools.com/kotlin/index.php" target="_blank"
+              >Learn Kotlin here</a
+            >
+          </div>
+
+          <div class="language-item">
+            <img src="img/rust.png" alt="Rust" />
+            <span>Rust</span>
+            <a href="https://www.rust-lang.org" target="_blank"
+              >Learn Rust here</a
+            >
+          </div>
+
+          <div class="language-item">
+            <img src="img/ts.png" alt="TypeScript" />
+            <span>TypeScript</span>
+            <a
+              href="https://www.w3schools.com/typescript/typescript_intro.php"
+              target="_blank"
+              >Learn typescript here</a
+            >
+          </div>
+
+          <div class="language-item">
+            <img src="img/php.png" alt="PHP" />
+            <span>PHP</span>
+            <a href="https://www.w3schools.com/php/default.asp" target="_blank"
+              >Learn php here</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const page1 = document.getElementById("page1");
+      const page2 = document.getElementById("page2");
+
+      function goToPage2() {
+        page1.style.transform = "translateX(-100%)";
+        page2.style.transform = "translateX(0)";
+      }
+
+      function startWithSound() {
+        const sound = document.getElementById("button-sound");
+        sound.play();
+        goToPage2();
+      }
+    </script>
+  </body>
+</html>
